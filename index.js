@@ -43,7 +43,7 @@ function findBinary(binName, dir) {
         .toString().trim();
     const globalBinPath = path.resolve(globalBinDir, binName);
     if (fs.existsSync(globalBinPath)) {
-        return binPath;
+        return globalBinPath;
     }
     return undefined;
 }
