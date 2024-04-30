@@ -59,6 +59,7 @@ module.exports = function lnpx(bin, args = []) {
         // npm bin command is not available on node@>=18/npm>=10,
         // fallback to npx
         child_process.execSync('npx --no-install ' + [bin].concat(args).join(' '), { stdio: 'inherit' });
+        return;
     }
 
     const binPath = findBinary(bin, process.cwd());

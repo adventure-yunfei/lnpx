@@ -1,6 +1,6 @@
 {
   "name": "lnpx",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "npx for local npm package binaries (also search parent folders)",
   "main": "index.js",
   "bin": {
