@@ -1,10 +1,14 @@
 {
   "name": "lnpx",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "npx for local npm package binaries (also search parent folders)",
   "main": "index.js",
   "bin": {
     "lnpx": "./bin/lnpx.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adventure-yunfei/lnpx"
   },
   "author": "",
   "license": "MIT"

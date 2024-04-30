@@ -53,6 +53,14 @@ function findBinary(binName, dir) {
  * @param {string[]} args Arguments to excute the binary
  */
 module.exports = function lnpx(bin, args = []) {
+    try {
+        child_process.execSync('npm bin', { stdio: 'ignore' });
+    } catch (e) {
+        // npm bin command is not available on node@>=18/npm>=10,
+        // fallback to npx
+        child_process.execSync('npx --no-install ' + [bin].concat(args).join(' '), { stdio: 'inherit' });
+    }
+
     const binPath = findBinary(bin, process.cwd());
     if (binPath) {
         console.log('Execute binary: ' + binPath);
